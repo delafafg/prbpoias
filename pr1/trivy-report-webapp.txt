@@ -1,0 +1,378 @@
+
+Report Summary
+
+┌───────────────────────────┬────────┬─────────────────┬─────────┐
+│          Target           │  Type  │ Vulnerabilities │ Secrets │
+├───────────────────────────┼────────┼─────────────────┼─────────┤
+│ webapp:v1 (alpine 3.19.1) │ alpine │       93        │    -    │
+└───────────────────────────┴────────┴─────────────────┴─────────┘
+Legend:
+- '-': Not scanned
+- '0': Clean (no security findings detected)
+
+
+webapp:v1 (alpine 3.19.1)
+=========================
+Total: 93 (UNKNOWN: 0, LOW: 28, MEDIUM: 45, HIGH: 17, CRITICAL: 3)
+
+┌───────────────┬────────────────┬──────────┬────────┬──────────────────────┬──────────────────────┬──────────────────────────────────────────────────────────────┐
+│    Library    │ Vulnerability  │ Severity │ Status │  Installed Version   │    Fixed Version     │                            Title                             │
+├───────────────┼────────────────┼──────────┼────────┼──────────────────────┼──────────────────────┼──────────────────────────────────────────────────────────────┤
+│ busybox       │ CVE-2023-42363 │ MEDIUM   │ fixed  │ 1.36.1-r15           │ 1.36.1-r17           │ busybox: use-after-free in awk                               │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2023-42363                   │
+│               ├────────────────┤          │        │                      ├──────────────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2023-42364 │          │        │                      │ 1.36.1-r19           │ busybox: use-after-free                                      │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2023-42364                   │
+│               ├────────────────┤          │        │                      │                      ├──────────────────────────────────────────────────────────────┤
+│               │ CVE-2023-42365 │          │        │                      │                      │ busybox: use-after-free                                      │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2023-42365                   │
+│               ├────────────────┤          │        │                      ├──────────────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2023-42366 │          │        │                      │ 1.36.1-r16           │ busybox: A heap-buffer-overflow                              │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2023-42366                   │
+│               ├────────────────┤          │        │                      ├──────────────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2024-58251 │          │        │                      │ 1.36.1-r21           │ In netstat in BusyBox through 1.37.0, local users can launch │
+│               │                │          │        │                      │                      │ of networ...                                                 │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2024-58251                   │
+│               ├────────────────┼──────────┤        │                      │                      ├──────────────────────────────────────────────────────────────┤
+│               │ CVE-2025-46394 │ LOW      │        │                      │                      │ In tar in BusyBox through 1.37.0, a TAR archive can have     │
+│               │                │          │        │                      │                      │ filenames...                                                 │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2025-46394                   │
+├───────────────┼────────────────┼──────────┤        │                      ├──────────────────────┼──────────────────────────────────────────────────────────────┤
+│ busybox-binsh │ CVE-2023-42363 │ MEDIUM   │        │                      │ 1.36.1-r17           │ busybox: use-after-free in awk                               │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2023-42363                   │
+│               ├────────────────┤          │        │                      ├──────────────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2023-42364 │          │        │                      │ 1.36.1-r19           │ busybox: use-after-free                                      │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2023-42364                   │
+│               ├────────────────┤          │        │                      │                      ├──────────────────────────────────────────────────────────────┤
+│               │ CVE-2023-42365 │          │        │                      │                      │ busybox: use-after-free                                      │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2023-42365                   │
+│               ├────────────────┤          │        │                      ├──────────────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2023-42366 │          │        │                      │ 1.36.1-r16           │ busybox: A heap-buffer-overflow                              │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2023-42366                   │
+│               ├────────────────┤          │        │                      ├──────────────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2024-58251 │          │        │                      │ 1.36.1-r21           │ In netstat in BusyBox through 1.37.0, local users can launch │
+│               │                │          │        │                      │                      │ of networ...                                                 │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2024-58251                   │
+│               ├────────────────┼──────────┤        │                      │                      ├──────────────────────────────────────────────────────────────┤
+│               │ CVE-2025-46394 │ LOW      │        │                      │                      │ In tar in BusyBox through 1.37.0, a TAR archive can have     │
+│               │                │          │        │                      │                      │ filenames...                                                 │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2025-46394                   │
+├───────────────┼────────────────┼──────────┤        ├──────────────────────┼──────────────────────┼──────────────────────────────────────────────────────────────┤
+│ curl          │ CVE-2024-6197  │ HIGH     │        │ 8.5.0-r0             │ 8.9.0-r0             │ libcurl's ASN1 parser has this utf8asn1str() function used   │
+│               │                │          │        │                      │                      │ for parsing ...                                              │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2024-6197                    │
+│               ├────────────────┤          │        │                      ├──────────────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2025-0725  │          │        │                      │ 8.12.0-r0            │ When libcurl is asked to perform automatic gzip              │
+│               │                │          │        │                      │                      │ decompression of conte ......                                │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2025-0725                    │
+│               ├────────────────┼──────────┤        │                      ├──────────────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2024-0853  │ MEDIUM   │        │                      │ 8.6.0-r0             │ curl inadvertently kept the SSL session ID for connections   │
+│               │                │          │        │                      │                      │ in its cach...                                               │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2024-0853                    │
+│               ├────────────────┤          │        │                      ├──────────────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2024-2379  │          │        │                      │ 8.7.1-r0             │ libcurl skips the certificate verification for a QUIC        │
+│               │                │          │        │                      │                      │ connection under ...                                         │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2024-2379                    │
+│               ├────────────────┤          │        │                      │                      ├──────────────────────────────────────────────────────────────┤
+│               │ CVE-2024-2398  │          │        │                      │                      │ When an application tells libcurl it wants to allow HTTP/2   │
+│               │                │          │        │                      │                      │ server push...                                               │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2024-2398                    │
+│               ├────────────────┤          │        │                      │                      ├──────────────────────────────────────────────────────────────┤
+│               │ CVE-2024-2466  │          │        │                      │                      │ libcurl did not check the server certificate of TLS          │
+│               │                │          │        │                      │                      │ connections done t...                                        │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2024-2466                    │
+│               ├────────────────┤          │        │                      ├──────────────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2024-6874  │          │        │                      │ 8.9.0-r0             │ libcurl's URL API function                                   │
+│               │                │          │        │                      │                      │ [curl_url_get()](https://curl.se/libcurl/c/ ...              │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2024-6874                    │
+│               ├────────────────┤          │        │                      ├──────────────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2024-7264  │          │        │                      │ 8.9.1-r0             │ libcurl's ASN1 parser code has the `GTime2str()` function,   │
+│               │                │          │        │                      │                      │ used for pa ......                                           │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2024-7264                    │
+│               ├────────────────┤          │        │                      ├──────────────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2024-8096  │          │        │                      │ 8.10.0-r0            │ When curl is told to use the Certificate Status Request TLS  │
+│               │                │          │        │                      │                      │ extension,...                                                │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2024-8096                    │
+│               ├────────────────┤          │        │                      ├──────────────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2024-9681  │          │        │                      │ 8.11.0-r0            │ When curl is asked to use HSTS, the expiry time for a...     │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2024-9681                    │
+│               ├────────────────┤          │        │                      ├──────────────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2025-4947  │          │        │                      │ 8.14.0-r0            │ libcurl accidentally skips the certificate verification for  │
+│               │                │          │        │                      │                      │ QUIC conne ...                                               │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2025-4947                    │
+│               ├────────────────┤          │        │                      │                      ├──────────────────────────────────────────────────────────────┤
+│               │ CVE-2025-5025  │          │        │                      │                      │ libcurl supports *pinning* of the server certificate public  │
+│               │                │          │        │                      │                      │ key for HT ......                                            │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2025-5025                    │
+│               ├────────────────┤          │        │                      ├──────────────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2025-5399  │          │        │                      │ 8.14.1-r0            │ Due to a mistake in libcurl's WebSocket code, a malicious    │
+│               │                │          │        │                      │                      │ server can...                                                │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2025-5399                    │
+│               ├────────────────┼──────────┤        │                      ├──────────────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2024-11053 │ LOW      │        │                      │ 8.11.1-r0            │ When asked to both use a `.netrc` file for credentials and   │
+│               │                │          │        │                      │                      │ to...                                                        │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2024-11053                   │
+│               ├────────────────┤          │        │                      ├──────────────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2024-2004  │          │        │                      │ 8.7.1-r0             │ When a protocol selection parameter option disables all      │
+│               │                │          │        │                      │                      │ protocols with ...                                           │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2024-2004                    │
+│               ├────────────────┤          │        │                      ├──────────────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2025-0167  │          │        │                      │ 8.12.0-r0            │ When asked to use a `.netrc` file for credentials **and** to │
+│               │                │          │        │                      │                      │ follow...                                                    │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2025-0167                    │
+│               ├────────────────┤          │        │                      │                      ├──────────────────────────────────────────────────────────────┤
+│               │ CVE-2025-0665  │          │        │                      │                      │ libcurl would wrongly close the same eventfd file descriptor │
+│               │                │          │        │                      │                      │ twice whe ......                                             │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2025-0665                    │
+│               ├────────────────┤          │        │                      ├──────────────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2025-10148 │          │        │                      │ 8.14.1-r2            │ curl's websocket code did not update the 32 bit mask pattern │
+│               │                │          │        │                      │                      │ for...                                                       │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2025-10148                   │
+│               ├────────────────┤          │        │                      │                      ├──────────────────────────────────────────────────────────────┤
+│               │ CVE-2025-9086  │          │        │                      │                      │ 1. A cookie is set using the `secure` keyword for            │
+│               │                │          │        │                      │                      │ `https://target` ...                                         │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2025-9086                    │
+├───────────────┼────────────────┼──────────┤        ├──────────────────────┼──────────────────────┼──────────────────────────────────────────────────────────────┤
+│ libcrypto3    │ CVE-2024-6119  │ HIGH     │        │ 3.1.4-r6             │ 3.1.7-r0             │ Issue summary: Applications performing certificate name      │
+│               │                │          │        │                      │                      │ checks (e.g., ...                                            │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2024-6119                    │
+│               ├────────────────┼──────────┤        │                      ├──────────────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2025-9230  │ MEDIUM   │        │                      │ 3.1.8-r1             │ Issue summary: An application trying to decrypt CMS messages │
+│               │                │          │        │                      │                      │ encrypted ...                                                │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2025-9230                    │
+│               ├────────────────┼──────────┤        │                      ├──────────────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2024-13176 │ LOW      │        │                      │ 3.1.8-r0             │ Issue summary: A timing side-channel which could potentially │
+│               │                │          │        │                      │                      │ allow rec ...                                                │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2024-13176                   │
+│               ├────────────────┤          │        │                      ├──────────────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2024-4603  │          │        │                      │ 3.1.5-r0             │ Issue summary: Checking excessively long DSA keys or         │
+│               │                │          │        │                      │                      │ parameters may be ......                                     │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2024-4603                    │
+│               ├────────────────┤          │        │                      ├──────────────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2024-4741  │          │        │                      │ 3.1.6-r0             │ Issue summary: Calling the OpenSSL API function              │
+│               │                │          │        │                      │                      │ SSL_free_buffers may c ...                                   │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2024-4741                    │
+│               ├────────────────┤          │        │                      │                      ├──────────────────────────────────────────────────────────────┤
+│               │ CVE-2024-5535  │          │        │                      │                      │ Issue summary: Calling the OpenSSL API function              │
+│               │                │          │        │                      │                      │ SSL_select_next_proto ...                                    │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2024-5535                    │
+│               ├────────────────┤          │        │                      ├──────────────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2024-9143  │          │        │                      │ 3.1.7-r1             │ Issue summary: Use of the low-level GF(2^m) elliptic curve   │
+│               │                │          │        │                      │                      │ APIs with u...                                               │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2024-9143                    │
+│               ├────────────────┤          │        │                      ├──────────────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2025-9232  │          │        │                      │ 3.1.8-r1             │ Issue summary: An application using the OpenSSL HTTP client  │
+│               │                │          │        │                      │                      │ API functi ......                                            │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2025-9232                    │
+├───────────────┼────────────────┼──────────┤        ├──────────────────────┼──────────────────────┼──────────────────────────────────────────────────────────────┤
+│ libcurl       │ CVE-2024-6197  │ HIGH     │        │ 8.5.0-r0             │ 8.9.0-r0             │ libcurl's ASN1 parser has this utf8asn1str() function used   │
+│               │                │          │        │                      │                      │ for parsing ...                                              │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2024-6197                    │
+│               ├────────────────┤          │        │                      ├──────────────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2025-0725  │          │        │                      │ 8.12.0-r0            │ When libcurl is asked to perform automatic gzip              │
+│               │                │          │        │                      │                      │ decompression of conte ......                                │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2025-0725                    │
+│               ├────────────────┼──────────┤        │                      ├──────────────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2024-0853  │ MEDIUM   │        │                      │ 8.6.0-r0             │ curl inadvertently kept the SSL session ID for connections   │
+│               │                │          │        │                      │                      │ in its cach...                                               │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2024-0853                    │
+│               ├────────────────┤          │        │                      ├──────────────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2024-2379  │          │        │                      │ 8.7.1-r0             │ libcurl skips the certificate verification for a QUIC        │
+│               │                │          │        │                      │                      │ connection under ...                                         │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2024-2379                    │
+│               ├────────────────┤          │        │                      │                      ├──────────────────────────────────────────────────────────────┤
+│               │ CVE-2024-2398  │          │        │                      │                      │ When an application tells libcurl it wants to allow HTTP/2   │
+│               │                │          │        │                      │                      │ server push...                                               │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2024-2398                    │
+│               ├────────────────┤          │        │                      │                      ├──────────────────────────────────────────────────────────────┤
+│               │ CVE-2024-2466  │          │        │                      │                      │ libcurl did not check the server certificate of TLS          │
+│               │                │          │        │                      │                      │ connections done t...                                        │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2024-2466                    │
+│               ├────────────────┤          │        │                      ├──────────────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2024-6874  │          │        │                      │ 8.9.0-r0             │ libcurl's URL API function                                   │
+│               │                │          │        │                      │                      │ [curl_url_get()](https://curl.se/libcurl/c/ ...              │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2024-6874                    │
+│               ├────────────────┤          │        │                      ├──────────────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2024-7264  │          │        │                      │ 8.9.1-r0             │ libcurl's ASN1 parser code has the `GTime2str()` function,   │
+│               │                │          │        │                      │                      │ used for pa ......                                           │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2024-7264                    │
+│               ├────────────────┤          │        │                      ├──────────────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2024-8096  │          │        │                      │ 8.10.0-r0            │ When curl is told to use the Certificate Status Request TLS  │
+│               │                │          │        │                      │                      │ extension,...                                                │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2024-8096                    │
+│               ├────────────────┤          │        │                      ├──────────────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2024-9681  │          │        │                      │ 8.11.0-r0            │ When curl is asked to use HSTS, the expiry time for a...     │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2024-9681                    │
+│               ├────────────────┤          │        │                      ├──────────────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2025-4947  │          │        │                      │ 8.14.0-r0            │ libcurl accidentally skips the certificate verification for  │
+│               │                │          │        │                      │                      │ QUIC conne ...                                               │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2025-4947                    │
+│               ├────────────────┤          │        │                      │                      ├──────────────────────────────────────────────────────────────┤
+│               │ CVE-2025-5025  │          │        │                      │                      │ libcurl supports *pinning* of the server certificate public  │
+│               │                │          │        │                      │                      │ key for HT ......                                            │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2025-5025                    │
+│               ├────────────────┤          │        │                      ├──────────────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2025-5399  │          │        │                      │ 8.14.1-r0            │ Due to a mistake in libcurl's WebSocket code, a malicious    │
+│               │                │          │        │                      │                      │ server can...                                                │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2025-5399                    │
+│               ├────────────────┼──────────┤        │                      ├──────────────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2024-11053 │ LOW      │        │                      │ 8.11.1-r0            │ When asked to both use a `.netrc` file for credentials and   │
+│               │                │          │        │                      │                      │ to...                                                        │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2024-11053                   │
+│               ├────────────────┤          │        │                      ├──────────────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2024-2004  │          │        │                      │ 8.7.1-r0             │ When a protocol selection parameter option disables all      │
+│               │                │          │        │                      │                      │ protocols with ...                                           │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2024-2004                    │
+│               ├────────────────┤          │        │                      ├──────────────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2025-0167  │          │        │                      │ 8.12.0-r0            │ When asked to use a `.netrc` file for credentials **and** to │
+│               │                │          │        │                      │                      │ follow...                                                    │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2025-0167                    │
+│               ├────────────────┤          │        │                      │                      ├──────────────────────────────────────────────────────────────┤
+│               │ CVE-2025-0665  │          │        │                      │                      │ libcurl would wrongly close the same eventfd file descriptor │
+│               │                │          │        │                      │                      │ twice whe ......                                             │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2025-0665                    │
+│               ├────────────────┤          │        │                      ├──────────────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2025-10148 │          │        │                      │ 8.14.1-r2            │ curl's websocket code did not update the 32 bit mask pattern │
+│               │                │          │        │                      │                      │ for...                                                       │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2025-10148                   │
+│               ├────────────────┤          │        │                      │                      ├──────────────────────────────────────────────────────────────┤
+│               │ CVE-2025-9086  │          │        │                      │                      │ 1. A cookie is set using the `secure` keyword for            │
+│               │                │          │        │                      │                      │ `https://target` ...                                         │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2025-9086                    │
+├───────────────┼────────────────┼──────────┤        ├──────────────────────┼──────────────────────┼──────────────────────────────────────────────────────────────┤
+│ libexpat      │ CVE-2024-45491 │ CRITICAL │        │ 2.6.2-r0             │ 2.6.3-r0             │ An issue was discovered in libexpat before 2.6.3. dtdCopy in │
+│               │                │          │        │                      │                      │ xmlparse. ......                                             │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2024-45491                   │
+│               ├────────────────┤          │        │                      │                      ├──────────────────────────────────────────────────────────────┤
+│               │ CVE-2024-45492 │          │        │                      │                      │ An issue was discovered in libexpat before 2.6.3.            │
+│               │                │          │        │                      │                      │ nextScaffoldPart in ......                                   │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2024-45492                   │
+│               ├────────────────┼──────────┤        │                      │                      ├──────────────────────────────────────────────────────────────┤
+│               │ CVE-2024-45490 │ HIGH     │        │                      │                      │ An issue was discovered in libexpat before 2.6.3. xmlparse.c │
+│               │                │          │        │                      │                      │ does not ...                                                 │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2024-45490                   │
+│               ├────────────────┼──────────┤        │                      ├──────────────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2024-50602 │ MEDIUM   │        │                      │ 2.6.4-r0             │ An issue was discovered in libexpat before 2.6.4. There is a │
+│               │                │          │        │                      │                      │ crash...                                                     │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2024-50602                   │
+│               ├────────────────┤          │        │                      ├──────────────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2024-8176  │          │        │                      │ 2.7.0-r0             │ A stack overflow vulnerability exists in the libexpat        │
+│               │                │          │        │                      │                      │ library due to t...                                          │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2024-8176                    │
+│               ├────────────────┤          │        │                      ├──────────────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2025-59375 │          │        │                      │ 2.7.2-r0             │ libexpat in Expat before 2.7.2 allows attackers to trigger   │
+│               │                │          │        │                      │                      │ large dynam ......                                           │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2025-59375                   │
+├───────────────┼────────────────┼──────────┤        ├──────────────────────┼──────────────────────┼──────────────────────────────────────────────────────────────┤
+│ libssl3       │ CVE-2024-6119  │ HIGH     │        │ 3.1.4-r6             │ 3.1.7-r0             │ Issue summary: Applications performing certificate name      │
+│               │                │          │        │                      │                      │ checks (e.g., ...                                            │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2024-6119                    │
+│               ├────────────────┼──────────┤        │                      ├──────────────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2025-9230  │ MEDIUM   │        │                      │ 3.1.8-r1             │ Issue summary: An application trying to decrypt CMS messages │
+│               │                │          │        │                      │                      │ encrypted ...                                                │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2025-9230                    │
+│               ├────────────────┼──────────┤        │                      ├──────────────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2024-13176 │ LOW      │        │                      │ 3.1.8-r0             │ Issue summary: A timing side-channel which could potentially │
+│               │                │          │        │                      │                      │ allow rec ...                                                │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2024-13176                   │
+│               ├────────────────┤          │        │                      ├──────────────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2024-4603  │          │        │                      │ 3.1.5-r0             │ Issue summary: Checking excessively long DSA keys or         │
+│               │                │          │        │                      │                      │ parameters may be ......                                     │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2024-4603                    │
+│               ├────────────────┤          │        │                      ├──────────────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2024-4741  │          │        │                      │ 3.1.6-r0             │ Issue summary: Calling the OpenSSL API function              │
+│               │                │          │        │                      │                      │ SSL_free_buffers may c ...                                   │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2024-4741                    │
+│               ├────────────────┤          │        │                      │                      ├──────────────────────────────────────────────────────────────┤
+│               │ CVE-2024-5535  │          │        │                      │                      │ Issue summary: Calling the OpenSSL API function              │
+│               │                │          │        │                      │                      │ SSL_select_next_proto ...                                    │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2024-5535                    │
+│               ├────────────────┤          │        │                      ├──────────────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2024-9143  │          │        │                      │ 3.1.7-r1             │ Issue summary: Use of the low-level GF(2^m) elliptic curve   │
+│               │                │          │        │                      │                      │ APIs with u...                                               │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2024-9143                    │
+│               ├────────────────┤          │        │                      ├──────────────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2025-9232  │          │        │                      │ 3.1.8-r1             │ Issue summary: An application using the OpenSSL HTTP client  │
+│               │                │          │        │                      │                      │ API functi ......                                            │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2025-9232                    │
+├───────────────┼────────────────┼──────────┤        ├──────────────────────┼──────────────────────┼──────────────────────────────────────────────────────────────┤
+│ libxml2       │ CVE-2024-56171 │ CRITICAL │        │ 2.11.7-r0            │ 2.11.8-r1            │ libxml2 before 2.12.10 and 2.13.x before 2.13.6 has a        │
+│               │                │          │        │                      │                      │ use-after-free i ......                                      │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2024-56171                   │
+│               ├────────────────┼──────────┤        │                      │                      ├──────────────────────────────────────────────────────────────┤
+│               │ CVE-2025-24928 │ HIGH     │        │                      │                      │ libxml2 before 2.12.10 and 2.13.x before 2.13.6 has a        │
+│               │                │          │        │                      │                      │ stack-based buff ......                                      │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2025-24928                   │
+│               ├────────────────┤          │        │                      ├──────────────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2025-27113 │          │        │                      │ 2.11.8-r2            │ libxml2 before 2.12.10 and 2.13.x before 2.13.6 has a NULL   │
+│               │                │          │        │                      │                      │ pointer der...                                               │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2025-27113                   │
+│               ├────────────────┤          │        │                      ├──────────────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2025-32414 │          │        │                      │ 2.11.8-r3            │ In libxml2 before 2.13.8 and 2.14.x before 2.14.2,           │
+│               │                │          │        │                      │                      │ out-of-bounds memor ...                                      │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2025-32414                   │
+│               ├────────────────┤          │        │                      │                      ├──────────────────────────────────────────────────────────────┤
+│               │ CVE-2025-32415 │          │        │                      │                      │ In libxml2 before 2.13.8 and 2.14.x before 2.14.2,           │
+│               │                │          │        │                      │                      │ xmlSchemaIDCFillNod ...                                      │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2025-32415                   │
+│               ├────────────────┼──────────┤        │                      ├──────────────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2024-34459 │ LOW      │        │                      │ 2.11.8-r0            │ An issue was discovered in xmllint (from libxml2) before     │
+│               │                │          │        │                      │                      │ 2.11.8 and 2....                                             │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2024-34459                   │
+├───────────────┼────────────────┼──────────┤        ├──────────────────────┼──────────────────────┼──────────────────────────────────────────────────────────────┤
+│ libxslt       │ CVE-2024-55549 │ HIGH     │        │ 1.1.39-r0            │ 1.1.39-r1            │ xsltGetInheritedNsList in libxslt before 1.1.43 has a        │
+│               │                │          │        │                      │                      │ use-after-free i ...                                         │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2024-55549                   │
+│               ├────────────────┤          │        │                      │                      ├──────────────────────────────────────────────────────────────┤
+│               │ CVE-2025-24855 │          │        │                      │                      │ numbers.c in libxslt before 1.1.43 has a use-after-free      │
+│               │                │          │        │                      │                      │ because, in ne ......                                        │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2025-24855                   │
+├───────────────┼────────────────┤          │        ├──────────────────────┼──────────────────────┼──────────────────────────────────────────────────────────────┤
+│ musl          │ CVE-2025-26519 │          │        │ 1.2.4_git20230717-r4 │ 1.2.4_git20230717-r5 │ musl libc 0.9.13 through 1.2.5 before 1.2.6 has an           │
+│               │                │          │        │                      │                      │ out-of-bounds write ......                                   │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2025-26519                   │
+│               ├────────────────┤          │        │                      ├──────────────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2026-40200 │          │        │                      │ 1.2.4_git20230717-r6 │ musl: musl libc: Arbitrary code execution and denial of      │
+│               │                │          │        │                      │                      │ service via stack-based...                                   │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2026-40200                   │
+│               ├────────────────┼──────────┤        │                      │                      ├──────────────────────────────────────────────────────────────┤
+│               │ CVE-2026-6042  │ MEDIUM   │        │                      │                      │ musl libc: GB18030 4-byte Decoder: musl libc: Denial of      │
+│               │                │          │        │                      │                      │ Service via inefficient...                                   │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2026-6042                    │
+├───────────────┼────────────────┼──────────┤        │                      ├──────────────────────┼──────────────────────────────────────────────────────────────┤
+│ musl-utils    │ CVE-2025-26519 │ HIGH     │        │                      │ 1.2.4_git20230717-r5 │ musl libc 0.9.13 through 1.2.5 before 1.2.6 has an           │
+│               │                │          │        │                      │                      │ out-of-bounds write ......                                   │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2025-26519                   │
+│               ├────────────────┤          │        │                      ├──────────────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2026-40200 │          │        │                      │ 1.2.4_git20230717-r6 │ musl: musl libc: Arbitrary code execution and denial of      │
+│               │                │          │        │                      │                      │ service via stack-based...                                   │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2026-40200                   │
+│               ├────────────────┼──────────┤        │                      │                      ├──────────────────────────────────────────────────────────────┤
+│               │ CVE-2026-6042  │ MEDIUM   │        │                      │                      │ musl libc: GB18030 4-byte Decoder: musl libc: Denial of      │
+│               │                │          │        │                      │                      │ Service via inefficient...                                   │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2026-6042                    │
+├───────────────┼────────────────┤          │        ├──────────────────────┼──────────────────────┼──────────────────────────────────────────────────────────────┤
+│ ssl_client    │ CVE-2023-42363 │          │        │ 1.36.1-r15           │ 1.36.1-r17           │ busybox: use-after-free in awk                               │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2023-42363                   │
+│               ├────────────────┤          │        │                      ├──────────────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2023-42364 │          │        │                      │ 1.36.1-r19           │ busybox: use-after-free                                      │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2023-42364                   │
+│               ├────────────────┤          │        │                      │                      ├──────────────────────────────────────────────────────────────┤
+│               │ CVE-2023-42365 │          │        │                      │                      │ busybox: use-after-free                                      │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2023-42365                   │
+│               ├────────────────┤          │        │                      ├──────────────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2023-42366 │          │        │                      │ 1.36.1-r16           │ busybox: A heap-buffer-overflow                              │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2023-42366                   │
+│               ├────────────────┤          │        │                      ├──────────────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2024-58251 │          │        │                      │ 1.36.1-r21           │ In netstat in BusyBox through 1.37.0, local users can launch │
+│               │                │          │        │                      │                      │ of networ...                                                 │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2024-58251                   │
+│               ├────────────────┼──────────┤        │                      │                      ├──────────────────────────────────────────────────────────────┤
+│               │ CVE-2025-46394 │ LOW      │        │                      │                      │ In tar in BusyBox through 1.37.0, a TAR archive can have     │
+│               │                │          │        │                      │                      │ filenames...                                                 │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2025-46394                   │
+├───────────────┼────────────────┼──────────┤        ├──────────────────────┼──────────────────────┼──────────────────────────────────────────────────────────────┤
+│ xz-libs       │ CVE-2025-31115 │ MEDIUM   │        │ 5.4.5-r0             │ 5.4.5-r1             │ XZ Utils provide a general-purpose data-compression library  │
+│               │                │          │        │                      │                      │ plus comma ...                                               │
+│               │                │          │        │                      │                      │ https://avd.aquasec.com/nvd/cve-2025-31115                   │
+└───────────────┴────────────────┴──────────┴────────┴──────────────────────┴──────────────────────┴──────────────────────────────────────────────────────────────┘

@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: webapp_nginx
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    networks:
+      - app-network
+    depends_on:
+      - db
+    volumes:
+      - ./html:/usr/share/nginx/html:ro
+
+  db:
+    image: mysql:8.0
+    container_name: webapp_mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword123
+      MYSQL_DATABASE: webapp_db
+      MYSQL_USER: webapp_user
+      MYSQL_PASSWORD: userpassword123
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - app-network
+    ports:
+      - "127.0.0.1:3306:3306"
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  db_data:
+    driver: local

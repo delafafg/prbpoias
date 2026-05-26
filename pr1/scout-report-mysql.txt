@@ -1,0 +1,364 @@
+
+
+## Overview
+
+                   │                                       Analyzed Image                                       
+───────────────────┼────────────────────────────────────────────────────────────────────────────────────────────
+ Target            │  mysql:8.0                                                                                 
+   digest          │  62fb722c78b2                                                                              
+   platform        │ linux/amd64                                                                                
+   provenance      │ https://github.com/docker-library/mysql.git                                                
+                   │  https://github.com/docker-library/mysql/blob/7cf11d5360282effadb347353d5f82339506b106                                                  
+   vulnerabilities │    1C    18H    23M     5L     1?                                                          
+   size            │ 234 MB                                                                                     
+   packages        │ 166                                                                                        
+                   │                                                                                            
+ Base image        │  oisupport/staging-amd64:ab3c28f0540635d34dcc9d858f683e032126e1cea0cc04f680cabaf303187972  
+                   │  1d2ffec1517a                                                                              
+
+
+## Packages and Vulnerabilities
+
+   1C    15H    16M     1L  stdlib 1.24.6
+pkg:golang/stdlib@1.24.6
+
+https://github.com/docker-library/mysql/blob/7cf11d5360282effadb347353d5f82339506b106/8.0/Dockerfile.oracle#L119-L119
+COPY docker-entrypoint.sh /usr/local/bin/
+
+    ✗ CRITICAL CVE-2025-68121
+      https://scout.docker.com/v/CVE-2025-68121?s=golang&n=stdlib&t=golang&vr=%3C1.24.13
+      Affected range : <1.24.13 
+      Fixed version  : 1.24.13  
+    
+    ✗ HIGH CVE-2026-42499
+      https://scout.docker.com/v/CVE-2026-42499?s=golang&n=stdlib&t=golang&vr=%3C1.25.10
+      Affected range : <1.25.10 
+      Fixed version  : 1.25.10  
+    
+    ✗ HIGH CVE-2026-39836
+      https://scout.docker.com/v/CVE-2026-39836?s=golang&n=stdlib&t=golang&vr=%3C1.25.10
+      Affected range : <1.25.10 
+      Fixed version  : 1.25.10  
+    
+    ✗ HIGH CVE-2026-39820
+      https://scout.docker.com/v/CVE-2026-39820?s=golang&n=stdlib&t=golang&vr=%3C1.25.10
+      Affected range : <1.25.10 
+      Fixed version  : 1.25.10  
+    
+    ✗ HIGH CVE-2026-33814
+      https://scout.docker.com/v/CVE-2026-33814?s=golang&n=stdlib&t=golang&vr=%3C1.25.10
+      Affected range : <1.25.10 
+      Fixed version  : 1.25.10  
+    
+    ✗ HIGH CVE-2026-33811
+      https://scout.docker.com/v/CVE-2026-33811?s=golang&n=stdlib&t=golang&vr=%3C1.25.10
+      Affected range : <1.25.10 
+      Fixed version  : 1.25.10  
+    
+    ✗ HIGH CVE-2026-32283
+      https://scout.docker.com/v/CVE-2026-32283?s=golang&n=stdlib&t=golang&vr=%3C1.25.9
+      Affected range : <1.25.9 
+      Fixed version  : 1.25.9  
+    
+    ✗ HIGH CVE-2026-32281
+      https://scout.docker.com/v/CVE-2026-32281?s=golang&n=stdlib&t=golang&vr=%3C1.25.9
+      Affected range : <1.25.9 
+      Fixed version  : 1.25.9  
+    
+    ✗ HIGH CVE-2026-32280
+      https://scout.docker.com/v/CVE-2026-32280?s=golang&n=stdlib&t=golang&vr=%3C1.25.9
+      Affected range : <1.25.9 
+      Fixed version  : 1.25.9  
+    
+    ✗ HIGH CVE-2026-25679
+      https://scout.docker.com/v/CVE-2026-25679?s=golang&n=stdlib&t=golang&vr=%3C1.25.8
+      Affected range : <1.25.8 
+      Fixed version  : 1.25.8  
+    
+    ✗ HIGH CVE-2025-61729
+      https://scout.docker.com/v/CVE-2025-61729?s=golang&n=stdlib&t=golang&vr=%3C1.24.11
+      Affected range : <1.24.11 
+      Fixed version  : 1.24.11  
+    
+    ✗ HIGH CVE-2025-61726
+      https://scout.docker.com/v/CVE-2025-61726?s=golang&n=stdlib&t=golang&vr=%3C1.24.12
+      Affected range : <1.24.12 
+      Fixed version  : 1.24.12  
+    
+    ✗ HIGH CVE-2025-61725
+      https://scout.docker.com/v/CVE-2025-61725?s=golang&n=stdlib&t=golang&vr=%3C1.24.8
+      Affected range : <1.24.8 
+      Fixed version  : 1.24.8  
+    
+    ✗ HIGH CVE-2025-61723
+      https://scout.docker.com/v/CVE-2025-61723?s=golang&n=stdlib&t=golang&vr=%3C1.24.8
+      Affected range : <1.24.8 
+      Fixed version  : 1.24.8  
+    
+    ✗ HIGH CVE-2025-58188
+      https://scout.docker.com/v/CVE-2025-58188?s=golang&n=stdlib&t=golang&vr=%3C1.24.8
+      Affected range : <1.24.8 
+      Fixed version  : 1.24.8  
+    
+    ✗ HIGH CVE-2025-58187
+      https://scout.docker.com/v/CVE-2025-58187?s=golang&n=stdlib&t=golang&vr=%3C1.24.9
+      Affected range : <1.24.9 
+      Fixed version  : 1.24.9  
+    
+    ✗ MEDIUM CVE-2025-61728
+      https://scout.docker.com/v/CVE-2025-61728?s=golang&n=stdlib&t=golang&vr=%3C1.24.12
+      Affected range : <1.24.12 
+      Fixed version  : 1.24.12  
+    
+    ✗ MEDIUM CVE-2025-61727
+      https://scout.docker.com/v/CVE-2025-61727?s=golang&n=stdlib&t=golang&vr=%3C1.24.11
+      Affected range : <1.24.11 
+      Fixed version  : 1.24.11  
+    
+    ✗ MEDIUM CVE-2026-32282
+      https://scout.docker.com/v/CVE-2026-32282?s=golang&n=stdlib&t=golang&vr=%3C1.25.9
+      Affected range : <1.25.9 
+      Fixed version  : 1.25.9  
+    
+    ✗ MEDIUM CVE-2026-39826
+      https://scout.docker.com/v/CVE-2026-39826?s=golang&n=stdlib&t=golang&vr=%3C1.25.10
+      Affected range : <1.25.10 
+      Fixed version  : 1.25.10  
+    
+    ✗ MEDIUM CVE-2026-39823
+      https://scout.docker.com/v/CVE-2026-39823?s=golang&n=stdlib&t=golang&vr=%3C1.25.10
+      Affected range : <1.25.10 
+      Fixed version  : 1.25.10  
+    
+    ✗ MEDIUM CVE-2026-32289
+      https://scout.docker.com/v/CVE-2026-32289?s=golang&n=stdlib&t=golang&vr=%3C1.25.9
+      Affected range : <1.25.9 
+      Fixed version  : 1.25.9  
+    
+    ✗ MEDIUM CVE-2026-27142
+      https://scout.docker.com/v/CVE-2026-27142?s=golang&n=stdlib&t=golang&vr=%3C1.25.8
+      Affected range : <1.25.8 
+      Fixed version  : 1.25.8  
+    
+    ✗ MEDIUM CVE-2026-32288
+      https://scout.docker.com/v/CVE-2026-32288?s=golang&n=stdlib&t=golang&vr=%3C1.25.9
+      Affected range : <1.25.9 
+      Fixed version  : 1.25.9  
+    
+    ✗ MEDIUM CVE-2026-39825
+      https://scout.docker.com/v/CVE-2026-39825?s=golang&n=stdlib&t=golang&vr=%3C1.25.10
+      Affected range : <1.25.10 
+      Fixed version  : 1.25.10  
+    
+    ✗ MEDIUM CVE-2025-61730
+      https://scout.docker.com/v/CVE-2025-61730?s=golang&n=stdlib&t=golang&vr=%3C1.24.12
+      Affected range : <1.24.12 
+      Fixed version  : 1.24.12  
+    
+    ✗ MEDIUM CVE-2025-61724
+      https://scout.docker.com/v/CVE-2025-61724?s=golang&n=stdlib&t=golang&vr=%3C1.24.8
+      Affected range : <1.24.8 
+      Fixed version  : 1.24.8  
+    
+    ✗ MEDIUM CVE-2025-58189
+      https://scout.docker.com/v/CVE-2025-58189?s=golang&n=stdlib&t=golang&vr=%3C1.24.8
+      Affected range : <1.24.8 
+      Fixed version  : 1.24.8  
+    
+    ✗ MEDIUM CVE-2025-58186
+      https://scout.docker.com/v/CVE-2025-58186?s=golang&n=stdlib&t=golang&vr=%3C1.24.8
+      Affected range : <1.24.8 
+      Fixed version  : 1.24.8  
+    
+    ✗ MEDIUM CVE-2025-58185
+      https://scout.docker.com/v/CVE-2025-58185?s=golang&n=stdlib&t=golang&vr=%3C1.24.8
+      Affected range : <1.24.8 
+      Fixed version  : 1.24.8  
+    
+    ✗ MEDIUM CVE-2025-47912
+      https://scout.docker.com/v/CVE-2025-47912?s=golang&n=stdlib&t=golang&vr=%3C1.24.8
+      Affected range : <1.24.8 
+      Fixed version  : 1.24.8  
+    
+    ✗ MEDIUM CVE-2025-58183
+      https://scout.docker.com/v/CVE-2025-58183?s=golang&n=stdlib&t=golang&vr=%3C1.24.8
+      Affected range : <1.24.8 
+      Fixed version  : 1.24.8  
+    
+    ✗ LOW CVE-2026-27139
+      https://scout.docker.com/v/CVE-2026-27139?s=golang&n=stdlib&t=golang&vr=%3C1.25.8
+      Affected range : <1.25.8 
+      Fixed version  : 1.25.8  
+    
+
+   0C     2H     0M     0L  urllib3 2.6.3
+pkg:pypi/urllib3@2.6.3
+
+https://github.com/docker-library/mysql/blob/7cf11d5360282effadb347353d5f82339506b106/8.0/Dockerfile.oracle#L119-L119
+COPY docker-entrypoint.sh /usr/local/bin/
+
+    ✗ HIGH CVE-2026-44432 [Improper Handling of Highly Compressed Data (Data Amplification)]
+      https://scout.docker.com/v/CVE-2026-44432?s=github&n=urllib3&t=pypi&vr=%3E%3D2.6.0%2C%3C2.7.0
+      Affected range : >=2.6.0                                                         
+                     : <2.7.0                                                          
+      Fixed version  : 2.7.0                                                           
+      CVSS Score     : 8.9                                                             
+      CVSS Vector    : CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:H 
+    
+    ✗ HIGH CVE-2026-44431 [Exposure of Sensitive Information to an Unauthorized Actor]
+      https://scout.docker.com/v/CVE-2026-44431?s=github&n=urllib3&t=pypi&vr=%3E%3D1.23%2C%3C2.7.0
+      Affected range : >=1.23                                                          
+                     : <2.7.0                                                          
+      Fixed version  : 2.7.0                                                           
+      CVSS Score     : 8.2                                                             
+      CVSS Vector    : CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N 
+    
+
+   0C     1H     0M     1L  pyopenssl 25.3.0
+pkg:pypi/pyopenssl@25.3.0
+
+https://github.com/docker-library/mysql/blob/7cf11d5360282effadb347353d5f82339506b106/8.0/Dockerfile.oracle#L119-L119
+COPY docker-entrypoint.sh /usr/local/bin/
+
+    ✗ HIGH CVE-2026-27459 [Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')]
+      https://scout.docker.com/v/CVE-2026-27459?s=github&n=pyopenssl&t=pypi&vr=%3E%3D22.0.0%2C%3C26.0.0
+      Affected range : >=22.0.0                                                            
+                     : <26.0.0                                                             
+      Fixed version  : 26.0.0                                                              
+      CVSS Score     : 7.2                                                                 
+      CVSS Vector    : CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:U 
+    
+    ✗ LOW CVE-2026-27448 [Not Failing Securely ('Failing Open')]
+      https://scout.docker.com/v/CVE-2026-27448?s=github&n=pyopenssl&t=pypi&vr=%3E%3D0.14.0%2C%3C26.0.0
+      Affected range : >=0.14.0                                                            
+                     : <26.0.0                                                             
+      Fixed version  : 26.0.0                                                              
+      CVSS Score     : 1.7                                                                 
+      CVSS Vector    : CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:U 
+    
+
+   0C     0H     2M     1L  pip 25.3
+pkg:pypi/pip@25.3
+
+https://github.com/docker-library/mysql/blob/7cf11d5360282effadb347353d5f82339506b106/8.0/Dockerfile.oracle#L119-L119
+COPY docker-entrypoint.sh /usr/local/bin/
+
+    ✗ MEDIUM CVE-2026-6357 [Inclusion of Functionality from Untrusted Control Sphere]
+      https://scout.docker.com/v/CVE-2026-6357?s=github&n=pip&t=pypi&vr=%3C26.1
+      Affected range : <26.1                                                           
+      Fixed version  : 26.1                                                            
+      CVSS Score     : 5.3                                                             
+      CVSS Vector    : CVSS:4.0/AV:L/AC:L/AT:P/PR:H/UI:A/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N 
+    
+    ✗ MEDIUM CVE-2026-3219 [Unrestricted Upload of File with Dangerous Type]
+      https://scout.docker.com/v/CVE-2026-3219?s=github&n=pip&t=pypi&vr=%3C%3D26.0.1
+      Affected range : <=26.0.1                                                        
+      Fixed version  : 26.1                                                            
+      CVSS Score     : 4.6                                                             
+      CVSS Vector    : CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:A/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N 
+    
+    ✗ LOW CVE-2026-1703 [Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')]
+      https://scout.docker.com/v/CVE-2026-1703?s=github&n=pip&t=pypi&vr=%3C26.0
+      Affected range : <26.0                                                           
+      Fixed version  : 26.0                                                            
+      CVSS Score     : 2.0                                                             
+      CVSS Vector    : CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:A/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N 
+    
+
+   0C     0H     2M     0L  glib2 2.68.4-18.el9_7.1
+pkg:rpm/oraclelinux/glib2@2.68.4-18.el9_7.1?os_name=oraclelinux&os_version=9
+
+https://github.com/docker-library/mysql/blob/7cf11d5360282effadb347353d5f82339506b106/8.0/Dockerfile.oracle#L0-L0
+
+
+    ✗ MEDIUM CVE-2025-14512
+      https://scout.docker.com/v/CVE-2025-14512?s=oracle&n=glib2&ns=oraclelinux&t=rpm&osn=oraclelinux&osv=9&vr=%3C0%3A2.68.4-18.el9_7.2
+      Affected range : <0:2.68.4-18.el9_7.2 
+      Fixed version  : 0:2.68.4-18.el9_7.2  
+    
+    ✗ MEDIUM CVE-2025-14087
+      https://scout.docker.com/v/CVE-2025-14087?s=oracle&n=glib2&ns=oraclelinux&t=rpm&osn=oraclelinux&osv=9&vr=%3C0%3A2.68.4-18.el9_7.2
+      Affected range : <0:2.68.4-18.el9_7.2 
+      Fixed version  : 0:2.68.4-18.el9_7.2  
+    
+
+   0C     0H     1M     1L  cryptography 46.0.5
+pkg:pypi/cryptography@46.0.5
+
+https://github.com/docker-library/mysql/blob/7cf11d5360282effadb347353d5f82339506b106/8.0/Dockerfile.oracle#L119-L119
+COPY docker-entrypoint.sh /usr/local/bin/
+
+    ✗ MEDIUM CVE-2026-39892 [Improper Restriction of Operations within the Bounds of a Memory Buffer]
+      https://scout.docker.com/v/CVE-2026-39892?s=github&n=cryptography&t=pypi&vr=%3E%3D45.0.0%2C%3C46.0.7
+      Affected range : >=45.0.0                                                        
+                     : <46.0.7                                                         
+      Fixed version  : 46.0.7                                                          
+      CVSS Score     : 6.9                                                             
+      CVSS Vector    : CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N 
+    
+    ✗ LOW CVE-2026-34073 [Improper Certificate Validation]
+      https://scout.docker.com/v/CVE-2026-34073?s=github&n=cryptography&t=pypi&vr=%3C46.0.6
+      Affected range : <46.0.6                                                             
+      Fixed version  : 46.0.6                                                              
+      CVSS Score     : 1.7                                                                 
+      CVSS Vector    : CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:U 
+    
+
+   0C     0H     1M     0L  systemd 252-55.0.3.el9_7.8
+pkg:rpm/oraclelinux/systemd@252-55.0.3.el9_7.8?os_name=oraclelinux&os_version=9
+
+https://github.com/docker-library/mysql/blob/7cf11d5360282effadb347353d5f82339506b106/8.0/Dockerfile.oracle#L119-L119
+COPY docker-entrypoint.sh /usr/local/bin/
+
+    ✗ MEDIUM CVE-2026-29111
+      https://scout.docker.com/v/CVE-2026-29111?s=oracle&n=systemd&ns=oraclelinux&t=rpm&osn=oraclelinux&osv=9&vr=%3C0%3A252-55.0.3.el9_7.9
+      Affected range : <0:252-55.0.3.el9_7.9 
+      Fixed version  : 0:252-55.0.3.el9_7.9  
+    
+
+   0C     0H     1M     0L  systemd-libs 252-55.0.3.el9_7.8
+pkg:rpm/oraclelinux/systemd-libs@252-55.0.3.el9_7.8?os_name=oraclelinux&os_version=9
+
+https://github.com/docker-library/mysql/blob/7cf11d5360282effadb347353d5f82339506b106/8.0/Dockerfile.oracle#L119-L119
+COPY docker-entrypoint.sh /usr/local/bin/
+
+    ✗ MEDIUM CVE-2026-29111
+      https://scout.docker.com/v/CVE-2026-29111?s=oracle&n=systemd-libs&ns=oraclelinux&t=rpm&osn=oraclelinux&osv=9&vr=%3C0%3A252-55.0.3.el9_7.9
+      Affected range : <0:252-55.0.3.el9_7.9 
+      Fixed version  : 0:252-55.0.3.el9_7.9  
+    
+
+   0C     0H     0M     1L  paramiko 4.0.0
+pkg:pypi/paramiko@4.0.0
+
+https://github.com/docker-library/mysql/blob/7cf11d5360282effadb347353d5f82339506b106/8.0/Dockerfile.oracle#L119-L119
+COPY docker-entrypoint.sh /usr/local/bin/
+
+    ✗ LOW CVE-2026-44405 [Use of a Broken or Risky Cryptographic Algorithm]
+      https://scout.docker.com/v/CVE-2026-44405?s=github&n=paramiko&t=pypi&vr=%3C%3D4.0.0
+      Affected range : <=4.0.0                                      
+      Fixed version  : not fixed                                    
+      CVSS Score     : 3.4                                          
+      CVSS Vector    : CVSS:3.1/AV:A/AC:H/PR:N/UI:N/S:C/C:N/I:L/A:N 
+    
+
+   0C     0H     0M     0L     1?  golang.org/x/sys 0.1.0
+pkg:golang/golang.org/x/sys@0.1.0
+
+https://github.com/docker-library/mysql/blob/7cf11d5360282effadb347353d5f82339506b106/8.0/Dockerfile.oracle#L119-L119
+COPY docker-entrypoint.sh /usr/local/bin/
+
+    ✗ UNSPECIFIED CVE-2026-39824
+      https://scout.docker.com/v/CVE-2026-39824?s=golang&n=sys&ns=golang.org%2Fx&t=golang&vr=%3C0.44.0
+      Affected range : <0.44.0 
+      Fixed version  : 0.44.0  
+    
+
+
+48 vulnerabilities found in 10 packages
+  CRITICAL     1  
+  HIGH         18 
+  MEDIUM       23 
+  LOW          5  
+  UNSPECIFIED  1  
+
