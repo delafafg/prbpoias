@@ -1,0 +1,101 @@
+.base_job: &base_job
+  image: python:3.11-slim
+  before_script:
+    - pip install --upgrade pip
+    - pip install -r requirements.txt
+  retry:
+    max: 2
+    when: runner_system_failure
+
+.notify_on_failure: &notify_on_failure
+  after_script:
+    - echo "Job $CI_JOB_NAME failed on $CI_COMMIT_BRANCH"
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "push"'
+      when: on_failure
+
+stages:
+  - lint
+  - test
+  - security
+  - build
+  - deploy
+
+lint:
+  <<: *base_job
+  stage: lint
+  script:
+    - flake8 src/
+    - black --check src/
+  rules:
+    - if: '$CI_COMMIT_BRANCH != "main"'
+
+test:matrix:
+  <<: [*base_job, *notify_on_failure]
+  stage: test
+  parallel:
+    matrix:
+      - PYTHON_VERSION: ["3.9", "3.10", "3.11"]
+        OS: ["ubuntu", "alpine"]
+        DB: ["postgres", "sqlite"]
+  image: python:${PYTHON_VERSION}-${OS}
+  services:
+    - name: postgres:14
+      alias: postgres
+      variables:
+        POSTGRES_DB: testdb
+        POSTGRES_PASSWORD: testpass
+  variables:
+    DATABASE_URL: "postgresql://postgres:testpass@postgres/testdb"
+    SQLITE_URL: "sqlite:///test.db"
+  script:
+    - |+
+      if [ "$DB" = "sqlite" ]; then
+        export TEST_DB_URL="$SQLITE_URL"
+      else
+        export TEST_DB_URL="$DATABASE_URL"
+      fi
+    - pytest tests/ -v --tb=short --db-url=$TEST_DB_URL
+  artifacts:
+    reports:
+      junit: report.xml
+    expire_in: 1 week
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'
+      when: always
+    - if: '$CI_MERGE_REQUEST_ID'
+      when: always
+    - when: manual
+
+security:trivy:
+  stage: security
+  image: aquasec/trivy:latest
+  script:
+    - trivy fs --exit-code 1 --severity CRITICAL .
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'
+
+build:docker:
+  <<: *base_job
+  stage: build
+  image: docker:24
+  services:
+    - docker:dind
+  script:
+    - docker build -t $CI_REGISTRY_IMAGE:$CI_COMMIT_TAG .
+    - docker push $CI_REGISTRY_IMAGE:$CI_COMMIT_TAG
+  rules:
+    - if: '$CI_COMMIT_TAG =~ /^v\d+\.\d+\.\d+$/'
+
+deploy:production:
+  stage: deploy
+  environment:
+    name: production
+    url: https://myapp.example.com
+  script:
+    - echo "Deploying $CI_COMMIT_TAG to production"
+    - ./deploy.sh production $CI_COMMIT_TAG
+  rules:
+    - if: '$CI_COMMIT_TAG'
+      when: manual
+      allow_failure: false

@@ -1,0 +1,3 @@
+"server:port": 8080
+"host:port:protocol": "localhost:443:https"
+'time:zone': "UTC+3"

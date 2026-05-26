@@ -1,0 +1,33 @@
+train_schedule:
+  - route:
+      from: "Москва (Казанский вокзал)"
+      to: "Казань"
+    departure: "08:00"
+    arrival: "15:30"
+    train_type: "Скоростной (Ласточка)"
+    train_number: "002Й"
+    days:
+      - Monday
+      - Wednesday
+      - Friday
+
+  - route:
+      from: "Москва (Ярославский вокзал)"
+      to: "Ярославль"
+    departure: "14:20"
+    arrival: "17:45"
+    train_type: "Экспресс"
+    train_number: "010Э"
+    days:
+      - daily
+
+  - route:
+      from: "Санкт-Петербург"
+      to: "Новгород"
+    departure: "09:15"
+    arrival: "11:50"
+    train_type: "Пригородный"
+    train_number: "6003"
+    days:
+      - Saturday
+      - Sunday

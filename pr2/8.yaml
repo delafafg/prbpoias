@@ -1,0 +1,26 @@
+company:
+  name: "ООО Рога и Копыта"
+  founded: 2010
+  employees:
+    - id: 1
+      name: "Иван Иванов"
+      position: "Backend Developer"
+      department: "Engineering"
+      salary: 150000
+    - id: 2
+      name: "Мария Петрова"
+      position: "DevOps Engineer"
+      department: "Infrastructure"
+      salary: 175000
+    - id: 3
+      name: "Алексей Сидоров"
+      position: "QA Engineer"
+      department: "Quality"
+      salary: 120000
+  departments:
+    - title: "Engineering"
+      head: "Иван Иванов"
+      headcount: 12
+    - title: "Infrastructure"
+      head: "Мария Петрова"
+      headcount: 5

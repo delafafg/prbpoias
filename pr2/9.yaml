@@ -1,0 +1,45 @@
+_base_deploy: &base_deploy
+  restart_policy: always
+  healthcheck:
+    interval: 30s
+    timeout: 10s
+    retries: 3
+
+_base_resources: &base_resources
+  cpu: "0.5"
+  memory: "256Mi"
+
+_prod_resources: &prod_resources
+  cpu: "2.0"
+  memory: "1Gi"
+
+services:
+  api:
+    <<: *base_deploy
+    image: "myapp/api:1.5.0"
+    port: 8080
+    resources:
+      <<: *base_resources
+    env:
+      NODE_ENV: production
+      LOG_LEVEL: info
+
+  worker:
+    <<: *base_deploy
+    image: "myapp/worker:1.5.0"
+    resources:
+      <<: *prod_resources
+    env:
+      NODE_ENV: production
+      CONCURRENCY: "4"
+
+  frontend:
+    <<: *base_deploy
+    image: "myapp/frontend:1.5.0"
+    port: 80
+    resources:
+      <<: *base_resources
+    healthcheck:
+      interval: 60s
+      timeout: 5s
+      retries: 5
